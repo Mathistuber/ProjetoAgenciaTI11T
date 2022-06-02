@@ -32,8 +32,9 @@ namespace ProjetoAgenciaTI11T.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pesquisarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarCliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,30 +65,41 @@ namespace ProjetoAgenciaTI11T.View
             this.menuStrip1.Location = new System.Drawing.Point(178, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuStrip1.Size = new System.Drawing.Size(404, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(524, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // sairToolStripMenuItem
             // 
+            this.sairToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sairToolStripMenuItem1});
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(51, 23);
             this.sairToolStripMenuItem.Text = "&Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // sairToolStripMenuItem1
+            // 
+            this.sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
+            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(108, 24);
+            this.sairToolStripMenuItem1.Text = "&Sair";
+            this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pesquisarToolStripMenuItem,
+            this.cadastrarCliToolStripMenuItem,
             this.pesquisarToolStripMenuItem4});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(74, 23);
             this.clienteToolStripMenuItem.Text = "&Cliente";
             // 
-            // pesquisarToolStripMenuItem
+            // cadastrarCliToolStripMenuItem
             // 
-            this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
-            this.pesquisarToolStripMenuItem.Text = "Cadastrar";
+            this.cadastrarCliToolStripMenuItem.Name = "cadastrarCliToolStripMenuItem";
+            this.cadastrarCliToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
+            this.cadastrarCliToolStripMenuItem.Text = "&Cadastrar";
+            this.cadastrarCliToolStripMenuItem.Click += new System.EventHandler(this.cadastrarCliToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem4
             // 
@@ -107,13 +119,14 @@ namespace ProjetoAgenciaTI11T.View
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem1
             // 
             this.pesquisarToolStripMenuItem1.Name = "pesquisarToolStripMenuItem1";
-            this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(149, 24);
+            this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.pesquisarToolStripMenuItem1.Text = "Pesquisar";
             // 
             // pacotesToolStripMenuItem
@@ -128,13 +141,14 @@ namespace ProjetoAgenciaTI11T.View
             // cadastrarToolStripMenuItem1
             // 
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(149, 24);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.cadastrarToolStripMenuItem1.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
             // 
             // pesquisarToolStripMenuItem2
             // 
             this.pesquisarToolStripMenuItem2.Name = "pesquisarToolStripMenuItem2";
-            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(149, 24);
+            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
             this.pesquisarToolStripMenuItem2.Text = "Pesquisar";
             // 
             // vendaToolStripMenuItem
@@ -166,6 +180,7 @@ namespace ProjetoAgenciaTI11T.View
             this.pictureBox1.Size = new System.Drawing.Size(776, 408);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MenuPrincipal
             // 
@@ -182,6 +197,7 @@ namespace ProjetoAgenciaTI11T.View
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SIstema Gerenciador de Viagens";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -195,7 +211,7 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarCliToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem funcionariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem1;
@@ -207,5 +223,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
     }
 }
