@@ -16,6 +16,7 @@ namespace ProjetoAgenciaTI11T.Model
         private static string dataPacoteVolta;
         private static string descricaoPacote;
         private static Array imagemPacote;
+        private static string retorno;
 
         public static int CodiogoPacote { get => codigoPacote; set => codigoPacote = value; }
         public static string ValorPacote { get => valorPacote; set => valorPacote = value; }
@@ -24,5 +25,7 @@ namespace ProjetoAgenciaTI11T.Model
         public static string DataPacoteIda { get => dataPacoteIda; set => dataPacoteIda = value; }
         public static string DataPacoteVolta { get => dataPacoteVolta; set => dataPacoteVolta = value; }
         public static string DescricaoPacote { get => descricaoPacote; set => descricaoPacote = value; }
+        public static Array ImagemPacote { get => imagemPacote; set => imagemPacote = value; }
+        public static string Retorno { get => retorno; set => retorno = value; }
     }
 }

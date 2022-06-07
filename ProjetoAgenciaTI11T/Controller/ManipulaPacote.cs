@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
+using ProjetoAgenciaTI11T.Model;
 
 namespace ProjetoAgenciaTI11T.Controller
 {
@@ -18,14 +16,34 @@ namespace ProjetoAgenciaTI11T.Controller
 
             try
             {
-                cmd.Parameters.AddWithValue("@valorPacote", "");
-                cmd.Parameters.AddWithValue("@origemPacote", "");
-                cmd.Parameters.AddWithValue("@destinoPacote", "");
-                cmd.Parameters.AddWithValue("@dataPacoteIda", "");
-                cmd.Parameters.AddWithValue("@dataPacoteVolta", "");
-                cmd.Parameters.AddWithValue("@descricao", "");
-                cmd.Parameters.AddWithValue("@imagemPacote", "");
+                cmd.Parameters.AddWithValue("@valorPacote",Pacote.ValorPacote);
+                cmd.Parameters.AddWithValue("@origemPacote",Pacote.OrigemPacote);
+                cmd.Parameters.AddWithValue("@destinoPacote",Pacote.DestinoPacote);
+                cmd.Parameters.AddWithValue("@dataPacoteIda",Pacote.DataPacoteIda);
+                cmd.Parameters.AddWithValue("@dataPacoteVolta",Pacote.DataPacoteVolta);
+                cmd.Parameters.AddWithValue("@descricao",Pacote.DescricaoPacote);
+                cmd.Parameters.AddWithValue("@imagemPacote","");
+
+                SqlParameter nv = cmd.Parameters.AddWithValue("@codigoPacote", SqlDbType.Int);
+                nv.Direction = ParameterDirection.Output;
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+
+                var resposta = MessageBox.Show("Cadastro de Pacote efetuado com sucesso, deseja efetuar outro cadastro?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    Pacote.Retorno = "Sim";
+                    return;
+                }
+                else
+                {
+                    Pacote.Retorno = "Não";
+                    return;
+                }
             }
+
             catch
             {
 
