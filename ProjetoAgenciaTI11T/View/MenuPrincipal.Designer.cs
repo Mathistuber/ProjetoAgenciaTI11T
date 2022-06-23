@@ -106,6 +106,7 @@ namespace ProjetoAgenciaTI11T.View
             this.pesquisarToolStripMenuItem4.Name = "pesquisarToolStripMenuItem4";
             this.pesquisarToolStripMenuItem4.Size = new System.Drawing.Size(149, 24);
             this.pesquisarToolStripMenuItem4.Text = "Pesquisar";
+            this.pesquisarToolStripMenuItem4.Click += new System.EventHandler(this.pesquisarToolStripMenuItem4_Click);
             // 
             // funcionariosToolStripMenuItem
             // 
@@ -128,6 +129,7 @@ namespace ProjetoAgenciaTI11T.View
             this.pesquisarToolStripMenuItem1.Name = "pesquisarToolStripMenuItem1";
             this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.pesquisarToolStripMenuItem1.Text = "Pesquisar";
+            this.pesquisarToolStripMenuItem1.Click += new System.EventHandler(this.pesquisarToolStripMenuItem1_Click);
             // 
             // pacotesToolStripMenuItem
             // 
@@ -141,14 +143,14 @@ namespace ProjetoAgenciaTI11T.View
             // cadastrarToolStripMenuItem1
             // 
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(149, 24);
             this.cadastrarToolStripMenuItem1.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
             // 
             // pesquisarToolStripMenuItem2
             // 
             this.pesquisarToolStripMenuItem2.Name = "pesquisarToolStripMenuItem2";
-            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
+            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(149, 24);
             this.pesquisarToolStripMenuItem2.Text = "Pesquisar";
             // 
             // vendaToolStripMenuItem

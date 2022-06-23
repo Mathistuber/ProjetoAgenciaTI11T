@@ -53,5 +53,17 @@ namespace ProjetoAgenciaTI11T.View
             TelaCadastrarPacote telaCadastrarPacote = new TelaCadastrarPacote();
             telaCadastrarPacote.ShowDialog();
         }
+
+        private void pesquisarToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            TelePesquisarCliente telePesquisarCliente = new TelePesquisarCliente();
+            telePesquisarCliente.ShowDialog();
+        }
+
+        private void pesquisarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaPesquisarFuncionario telaPesquisarFuncionario = new TelaPesquisarFuncionario();
+            telaPesquisarFuncionario.ShowDialog();
+        }
     }
 }
