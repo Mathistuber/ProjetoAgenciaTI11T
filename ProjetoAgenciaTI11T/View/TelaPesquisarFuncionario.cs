@@ -61,5 +61,31 @@ namespace ProjetoAgenciaTI11T.View
             }
         }
 
+        private void btnDeletarFuncionario_Click(object sender, EventArgs e)
+        {
+            if (tbxCodigoFun.Text == "")
+            {
+                MessageBox.Show("Digite um código de Funcionario", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                tbxCodigoFun.Text = string.Empty;
+                tbxCodigoFun.Focus();
+                tbxCodigoFun.SelectAll();
+                tbxNomeFun.Text = string.Empty;
+                tbxEmailFun.Text = string.Empty;
+                tbxSenhaFun.Text = string.Empty;
+            }
+            else
+            {
+                var resposta = MessageBox.Show("Deseja excluir o Cliente " + tbxCodigoFun.Text + "?",
+                  "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    Funcionarios.CodigoFun = Convert.ToInt32(tbxCodigoFun.Text);
+                    ManipulaFuncionario manipulaFuncionario = new ManipulaFuncionario();
+                    manipulaFuncionario.deletarFuncionario();
+                }
+            }
+        }
     }
 }
