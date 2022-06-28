@@ -44,8 +44,18 @@ namespace ProjetoAgenciaTI11T.View
             this.label9 = new System.Windows.Forms.Label();
             this.tbxCodigoFun = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbxNomeFuncionario = new System.Windows.Forms.TextBox();
+            this.btnBuscarNomeFun = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,6 +80,10 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnBuscarNomeFun);
+            this.tabPage2.Controls.Add(this.tbxNomeFuncionario);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -197,6 +211,70 @@ namespace ProjetoAgenciaTI11T.View
             this.label3.TabIndex = 2;
             this.label3.Text = "Digite o Codigo do Funcionario...";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Nome,
+            this.Email,
+            this.Foto});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 81);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(768, 223);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // Codigo
+            // 
+            this.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 71;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // Foto
+            // 
+            this.Foto.HeaderText = "Foto";
+            this.Foto.Name = "Foto";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(6, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(225, 21);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Digite o nome do Funcionario...";
+            // 
+            // tbxNomeFuncionario
+            // 
+            this.tbxNomeFuncionario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxNomeFuncionario.Location = new System.Drawing.Point(237, 38);
+            this.tbxNomeFuncionario.Name = "tbxNomeFuncionario";
+            this.tbxNomeFuncionario.Size = new System.Drawing.Size(371, 29);
+            this.tbxNomeFuncionario.TabIndex = 7;
+            // 
+            // btnBuscarNomeFun
+            // 
+            this.btnBuscarNomeFun.Location = new System.Drawing.Point(614, 42);
+            this.btnBuscarNomeFun.Name = "btnBuscarNomeFun";
+            this.btnBuscarNomeFun.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarNomeFun.TabIndex = 8;
+            this.btnBuscarNomeFun.Text = "Buscar";
+            this.btnBuscarNomeFun.UseVisualStyleBackColor = true;
+            // 
             // TelaPesquisarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -207,8 +285,11 @@ namespace ProjetoAgenciaTI11T.View
             this.Name = "TelaPesquisarFuncionario";
             this.Text = "TelaPesquisarFuncionario";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +312,13 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Button btnAlterarFuncionario;
         private System.Windows.Forms.Button btnDeletarFuncionario;
         private System.Windows.Forms.Button btnBuscarFuncionario;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Foto;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbxNomeFuncionario;
+        private System.Windows.Forms.Button btnBuscarNomeFun;
     }
 }
