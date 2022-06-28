@@ -40,16 +40,7 @@ namespace ProjetoAgenciaTI11T.View
                 ManipulaCliente manipulaCliente = new ManipulaCliente();
                 manipulaCliente.pesquisarCodigoCliente();
 
-                tbxCodigoCli.Text = Clientes.CodigoCli.ToString();
-                tbxNomeCli.Text = Clientes.NomeCli;
-                tbxEmailCli.Text = Clientes.EmailCli;
-                tbxSenhaCli.Text = Clientes.SenhaCli;
-
-                MemoryStream ms = new MemoryStream((byte[])Clientes.ImagemCli);
-                pictureBox2.Image = Image.FromStream(ms);
-
-            }   
-            if(Clientes.Retorno == "Não")
+                if (Clientes.Retorno == "Não")
                 {
                     tbxCodigoCli.Text = string.Empty;
                     tbxCodigoCli.Focus();
@@ -59,6 +50,95 @@ namespace ProjetoAgenciaTI11T.View
                     tbxSenhaCli.Text = string.Empty;
                     pictureBox2.Image = null;
                     return;
+                }
+                else
+                {
+                    tbxCodigoCli.Text = Clientes.CodigoCli.ToString();
+                    tbxNomeCli.Text = Clientes.NomeCli;
+                    tbxEmailCli.Text = Clientes.EmailCli;
+                    tbxSenhaCli.Text = Clientes.SenhaCli;
+
+                    MemoryStream ms = new MemoryStream((byte[])Clientes.ImagemCli);
+                    pictureBox2.Image = Image.FromStream(ms);
+                }
+
+
+
+            }
+        }
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (tbxCodigoCli.Text == "")
+            {
+                MessageBox.Show("Digite um código de cliente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                tbxCodigoCli.Text = string.Empty;
+                tbxCodigoCli.Focus();
+                tbxCodigoCli.SelectAll();
+                tbxNomeCli.Text = string.Empty;
+                tbxEmailCli.Text = string.Empty;
+                tbxSenhaCli.Text = string.Empty;
+                pictureBox2.Image = null;
+            }
+            else
+            {
+                var resposta = MessageBox.Show("Deseja excluir o Cliente " + tbxCodigoCli.Text + "?",
+                    "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+
+            if (resposta == DialogResult.Yes)
+                {
+                    Clientes.CodigoCli = Convert.ToInt32(tbxCodigoCli.Text);
+                    ManipulaCliente manipulaCliente = new ManipulaCliente();
+                    manipulaCliente.deletarCliente();
+                }
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if(tbxCodigoCli.Text == "")
+            {
+                MessageBox.Show("Digite um de Cliente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                tbxCodigoCli.Text = string.Empty;
+                tbxCodigoCli.Focus();
+                tbxCodigoCli.SelectAll();
+                tbxNomeCli.Text = string.Empty;
+                tbxEmailCli.Text = string.Empty;
+                tbxSenhaCli.Text = string.Empty;
+                pictureBox2.Image = null;
+
+            }
+            else
+            {
+                var resposta = MessageBox.Show("Deseja alterar os do Cliente" + tbxCodigoCli.Text + "?",
+                    "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    Clientes.CodigoCli = Convert.ToInt32(tbxCodigoCli.Text);
+                    Clientes.NomeCli = tbxNomeCli.Text;
+                    Clientes.EmailCli = tbxEmailCli.Text;
+                    Clientes.SenhaCli = tbxSenhaCli.Text;
+
+                    MemoryStream ms = new MemoryStream();
+                    pictureBox2.Image.Save(ms, pictureBox2.Image.RawFormat);
+                    Clientes.ImagemCli = ms.ToArray();
+
+
+                    ManipulaCliente manipulaCliente = new ManipulaCliente();
+                    manipulaCliente.alterarCliente();
+
+                }
+            }
+        }
+
+        private void btnBuscarImagem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Escolha uma imagem (*.jpg;*.png;*.jpeg)" + "| *.jpg; *.jpeg; *.png ";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox2.Image = Image.FromFile(openFileDialog1.FileName);
             }
         }
     }

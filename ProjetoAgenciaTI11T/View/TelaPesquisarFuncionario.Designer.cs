@@ -130,6 +130,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnDeletarFuncionario.TabIndex = 25;
             this.btnDeletarFuncionario.Text = "Deletar";
             this.btnDeletarFuncionario.UseVisualStyleBackColor = true;
+            this.btnDeletarFuncionario.Click += new System.EventHandler(this.btnDeletarFuncionario_Click);
             // 
             // btnBuscarFuncionario
             // 

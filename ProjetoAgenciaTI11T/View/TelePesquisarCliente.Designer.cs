@@ -54,6 +54,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.tbxCodigoCli = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -190,15 +191,17 @@ namespace ProjetoAgenciaTI11T.View
             this.btnDeletar.TabIndex = 19;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnBuscarImagem
             // 
-            this.btnBuscarImagem.Location = new System.Drawing.Point(503, 218);
+            this.btnBuscarImagem.Location = new System.Drawing.Point(484, 218);
             this.btnBuscarImagem.Name = "btnBuscarImagem";
-            this.btnBuscarImagem.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarImagem.Size = new System.Drawing.Size(105, 23);
             this.btnBuscarImagem.TabIndex = 18;
             this.btnBuscarImagem.Text = "Buscar Imagem";
             this.btnBuscarImagem.UseVisualStyleBackColor = true;
+            this.btnBuscarImagem.Click += new System.EventHandler(this.btnBuscarImagem_Click);
             // 
             // btnAlterar
             // 
@@ -208,6 +211,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnAlterar.TabIndex = 17;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // pictureBox2
             // 
@@ -298,6 +302,10 @@ namespace ProjetoAgenciaTI11T.View
             this.label2.TabIndex = 0;
             this.label2.Text = "Digite o Codigo do Cliente...";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // TelePesquisarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -348,5 +356,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Foto;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

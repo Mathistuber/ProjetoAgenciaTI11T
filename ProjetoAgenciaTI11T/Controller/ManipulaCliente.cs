@@ -92,7 +92,7 @@ namespace ProjetoAgenciaTI11T.Controller
         public void deletarCliente()
         {
             SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
-            SqlCommand cmd = new SqlCommand("pDeletarClliente", cn);
+            SqlCommand cmd = new SqlCommand("pDeletarCliente", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             try
             {
