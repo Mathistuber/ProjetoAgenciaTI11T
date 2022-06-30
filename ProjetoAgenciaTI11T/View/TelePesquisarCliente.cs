@@ -141,5 +141,29 @@ namespace ProjetoAgenciaTI11T.View
                 pictureBox2.Image = Image.FromFile(openFileDialog1.FileName);
             }
         }
+
+        private void btnBuscarNomeCliente_Click(object sender, EventArgs e)
+        {
+            if(tbxNomeCliente.Text == "")
+            {
+                MessageBox.Show("Digite um nome para busca. ", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Clientes.NomeCli = tbxNomeCliente.Text;
+
+            dataGridView1.DataSource = ManipulaCliente.pesquisarNomeCliente();
+
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].HeaderCell.Value = "Código";
+            dataGridView1.Columns[5].HeaderCell.Value = "Nome";
+            dataGridView1.Columns[6].HeaderCell.Value = "Email";
+            dataGridView1.Columns[7].Visible = false;
+            dataGridView1.Columns[8].HeaderCell.Value = "Foto";
+       
+        }
     }
 }

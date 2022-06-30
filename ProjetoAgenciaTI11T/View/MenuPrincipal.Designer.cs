@@ -120,14 +120,14 @@ namespace ProjetoAgenciaTI11T.View
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem1
             // 
             this.pesquisarToolStripMenuItem1.Name = "pesquisarToolStripMenuItem1";
-            this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(149, 24);
             this.pesquisarToolStripMenuItem1.Text = "Pesquisar";
             this.pesquisarToolStripMenuItem1.Click += new System.EventHandler(this.pesquisarToolStripMenuItem1_Click);
             // 
@@ -152,6 +152,7 @@ namespace ProjetoAgenciaTI11T.View
             this.pesquisarToolStripMenuItem2.Name = "pesquisarToolStripMenuItem2";
             this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(149, 24);
             this.pesquisarToolStripMenuItem2.Text = "Pesquisar";
+            this.pesquisarToolStripMenuItem2.Click += new System.EventHandler(this.pesquisarToolStripMenuItem2_Click);
             // 
             // vendaToolStripMenuItem
             // 
@@ -165,13 +166,14 @@ namespace ProjetoAgenciaTI11T.View
             // registrarToolStripMenuItem
             // 
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.registrarToolStripMenuItem.Text = "Registrar";
+            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem3
             // 
             this.pesquisarToolStripMenuItem3.Name = "pesquisarToolStripMenuItem3";
-            this.pesquisarToolStripMenuItem3.Size = new System.Drawing.Size(149, 24);
+            this.pesquisarToolStripMenuItem3.Size = new System.Drawing.Size(180, 24);
             this.pesquisarToolStripMenuItem3.Text = "Pesquisar";
             // 
             // pictureBox1

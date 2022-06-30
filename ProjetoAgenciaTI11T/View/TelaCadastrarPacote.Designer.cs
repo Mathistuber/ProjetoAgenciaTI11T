@@ -40,7 +40,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscarPacote = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tbxValor = new System.Windows.Forms.TextBox();
-            this.tbxDescrição = new System.Windows.Forms.TextBox();
+            this.tbxDescricao = new System.Windows.Forms.TextBox();
             this.tbxDataVolta = new System.Windows.Forms.TextBox();
             this.tbxDataIda = new System.Windows.Forms.TextBox();
             this.tbxDestino = new System.Windows.Forms.TextBox();
@@ -156,12 +156,12 @@ namespace ProjetoAgenciaTI11T.View
             this.tbxValor.Size = new System.Drawing.Size(218, 23);
             this.tbxValor.TabIndex = 10;
             // 
-            // tbxDescrição
+            // tbxDescricao
             // 
-            this.tbxDescrição.Location = new System.Drawing.Point(146, 292);
-            this.tbxDescrição.Name = "tbxDescrição";
-            this.tbxDescrição.Size = new System.Drawing.Size(232, 23);
-            this.tbxDescrição.TabIndex = 11;
+            this.tbxDescricao.Location = new System.Drawing.Point(146, 292);
+            this.tbxDescricao.Name = "tbxDescricao";
+            this.tbxDescricao.Size = new System.Drawing.Size(232, 23);
+            this.tbxDescricao.TabIndex = 11;
             // 
             // tbxDataVolta
             // 
@@ -205,7 +205,7 @@ namespace ProjetoAgenciaTI11T.View
             this.Controls.Add(this.tbxDestino);
             this.Controls.Add(this.tbxDataIda);
             this.Controls.Add(this.tbxDataVolta);
-            this.Controls.Add(this.tbxDescrição);
+            this.Controls.Add(this.tbxDescricao);
             this.Controls.Add(this.tbxValor);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnBuscarPacote);
@@ -238,7 +238,7 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Button btnBuscarPacote;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbxValor;
-        private System.Windows.Forms.TextBox tbxDescrição;
+        private System.Windows.Forms.TextBox tbxDescricao;
         private System.Windows.Forms.TextBox tbxDataVolta;
         private System.Windows.Forms.TextBox tbxDataIda;
         private System.Windows.Forms.TextBox tbxDestino;

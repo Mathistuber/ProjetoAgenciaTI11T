@@ -87,5 +87,59 @@ namespace ProjetoAgenciaTI11T.View
                 }
             }
         }
+
+        private void btnAlterarFuncionario_Click(object sender, EventArgs e)
+        {
+            if (tbxCodigoFun.Text == "")
+            {
+                MessageBox.Show("Digite um Codigo de Funcionario ", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                tbxCodigoFun.Text = string.Empty;
+                tbxCodigoFun.Focus();
+                tbxCodigoFun.SelectAll();
+                tbxNomeFun.Text = string.Empty;
+                tbxEmailFun.Text = string.Empty;
+                tbxSenhaFun.Text = string.Empty;
+
+            }
+            else
+            {
+                var resposta = MessageBox.Show("Deseja alterar os dados do Funcionario " + tbxCodigoFun.Text + "?",
+                    "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    Funcionarios.CodigoFun = Convert.ToInt32(tbxCodigoFun.Text);
+                    Funcionarios.NomeFun = tbxNomeFun.Text;
+                    Funcionarios.EmailFun = tbxEmailFun.Text;
+                    Funcionarios.SenhaFun = tbxSenhaFun.Text;
+
+                    ManipulaFuncionario manipulaFuncionario = new ManipulaFuncionario();
+                    manipulaFuncionario.alterarFuncionario();
+
+                }
+            }
+        }
+
+        private void btnBuscarNomeFun_Click(object sender, EventArgs e)
+        {
+            if(tbxNomeFuncionario.Text == "")
+            {
+                MessageBox.Show("Digite um nome para busca. ", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Funcionarios.NomeFun = tbxNomeFuncionario.Text;
+
+            dataGridViewFun.DataSource = ManipulaFuncionario.pesquisarFuncionario();
+
+            dataGridViewFun.Columns[0].Visible = false;
+            dataGridViewFun.Columns[1].Visible = false;
+            dataGridViewFun.Columns[2].Visible = false;
+            dataGridViewFun.Columns[4].HeaderCell.Value = "Código";
+            dataGridViewFun.Columns[5].HeaderCell.Value = "Nome";
+            dataGridViewFun.Columns[6].HeaderCell.Value = "Email";
+
+        }
     }
 }

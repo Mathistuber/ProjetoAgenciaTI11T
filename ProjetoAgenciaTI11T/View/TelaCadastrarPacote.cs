@@ -31,9 +31,9 @@ namespace ProjetoAgenciaTI11T.View
 
         private void btnSalvarPacote_Click(object sender, EventArgs e)
         {
-            if ( tbxValor.Text == "" | tbxOrigemPacote.Text == "" | tbxDestino.Text == "" | tbxDataIda.Text == "" | tbxDataVolta.Text == ""| tbxDescrição.Text == "" | pictureBox2.Image == null)
+            if (tbxValor.Text == "" | tbxOrigemPacote.Text == "" | tbxDestino.Text == "" | tbxDataIda.Text == "" | tbxDataVolta.Text == "" | tbxDescricao.Text == "" | pictureBox2.Image == null)
             {
-                MessageBox.Show("Preencha todas as informações corretamente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Preencha todas as Informações corretamente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -42,7 +42,7 @@ namespace ProjetoAgenciaTI11T.View
                 Pacote.DestinoPacote = tbxDestino.Text;
                 Pacote.DataPacoteIda = tbxDataIda.Text;
                 Pacote.DataPacoteVolta = tbxDataVolta.Text;
-                Pacote.DescricaoPacote = tbxDescrição.Text;
+                Pacote.DescricaoPacote = tbxDescricao.Text;
                 if (pictureBox2.Image != null)
                 {
 
@@ -51,22 +51,24 @@ namespace ProjetoAgenciaTI11T.View
                     Pacote.ImagemPacote = memoryStream.ToArray();
                 }
 
-                ManipulaCliente manipulaCliente = new ManipulaCliente();
-                manipulaCliente.cadastrarCliente();
+                ManipulaPacote manipulaPacote = new ManipulaPacote();
+                manipulaPacote.cadastrarPacote();
 
             }
 
-            if (Clientes.Retorno == "Sim")
+            if (Pacote.Retorno == "Sim")
             {
                 LimpaTela();
                 return;
+
             }
 
-            if (Clientes.Retorno == "Não")
+            if(Pacote.Retorno == "Não")
             {
                 fecharCadastro();
                 return;
             }
+
         }
 
         public void fecharCadastro()
@@ -82,12 +84,11 @@ namespace ProjetoAgenciaTI11T.View
                 {
                     ctl.Text = String.Empty;
                 }
-                if (ctl is PictureBox)
+                if(ctl is PictureBox)
                 {
                     pictureBox2.Image = null;
                 }
             }
         }
-
-    }
+    }    
 }

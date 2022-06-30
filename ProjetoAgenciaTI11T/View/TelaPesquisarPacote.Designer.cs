@@ -32,31 +32,39 @@ namespace ProjetoAgenciaTI11T.View
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridViewPaco = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Origem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Destino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscarNomePacote = new System.Windows.Forms.Button();
+            this.tbxOrigem = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tbxSenhaPacote = new System.Windows.Forms.TextBox();
-            this.tbxEmailPacote = new System.Windows.Forms.TextBox();
-            this.tbxNomePacote = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbxDataVolta = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxDataIda = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBoxPacote = new System.Windows.Forms.PictureBox();
+            this.tbxDestinoPacote = new System.Windows.Forms.TextBox();
+            this.tbxOrigemPacote = new System.Windows.Forms.TextBox();
+            this.tbxValorPacote = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnBuscarPacote = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAlterarPacote = new System.Windows.Forms.Button();
+            this.btnDeletarPacote = new System.Windows.Forms.Button();
             this.btnBuscarImagemPacote = new System.Windows.Forms.Button();
             this.tbxCodigoPacote = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.openFileDialogPacote = new System.Windows.Forms.OpenFileDialog();
+            this.tbxDescrição = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPaco)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPacote)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,34 +89,94 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.dataGridViewPaco);
+            this.tabPage1.Controls.Add(this.btnBuscarNomePacote);
+            this.tabPage1.Controls.Add(this.tbxOrigem);
+            this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(768, 305);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "blabla";
+            this.tabPage1.Text = "Pesquisar por Nome";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewPaco
+            // 
+            this.dataGridViewPaco.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewPaco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPaco.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Origem,
+            this.Destino});
+            this.dataGridViewPaco.Location = new System.Drawing.Point(6, 79);
+            this.dataGridViewPaco.Name = "dataGridViewPaco";
+            this.dataGridViewPaco.RowTemplate.Height = 25;
+            this.dataGridViewPaco.Size = new System.Drawing.Size(756, 223);
+            this.dataGridViewPaco.TabIndex = 8;
+            // 
+            // Codigo
+            // 
+            this.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 71;
+            // 
+            // Origem
+            // 
+            this.Origem.HeaderText = "Origem";
+            this.Origem.Name = "Origem";
+            // 
+            // Destino
+            // 
+            this.Destino.HeaderText = "Destino";
+            this.Destino.Name = "Destino";
+            // 
+            // btnBuscarNomePacote
+            // 
+            this.btnBuscarNomePacote.Location = new System.Drawing.Point(618, 50);
+            this.btnBuscarNomePacote.Name = "btnBuscarNomePacote";
+            this.btnBuscarNomePacote.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarNomePacote.TabIndex = 7;
+            this.btnBuscarNomePacote.Text = "Buscar";
+            this.btnBuscarNomePacote.UseVisualStyleBackColor = true;
+            // 
+            // tbxOrigem
+            // 
+            this.tbxOrigem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxOrigem.Location = new System.Drawing.Point(203, 44);
+            this.tbxOrigem.Name = "tbxOrigem";
+            this.tbxOrigem.Size = new System.Drawing.Size(409, 29);
+            this.tbxOrigem.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(6, 47);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(188, 21);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Digite o nome do Pacote...";
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.richTextBox1);
+            this.tabPage2.Controls.Add(this.tbxDescrição);
             this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.textBox3);
+            this.tabPage2.Controls.Add(this.tbxDataVolta);
             this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.tbxDataIda);
             this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.pictureBox2);
-            this.tabPage2.Controls.Add(this.tbxSenhaPacote);
-            this.tabPage2.Controls.Add(this.tbxEmailPacote);
-            this.tabPage2.Controls.Add(this.tbxNomePacote);
+            this.tabPage2.Controls.Add(this.pictureBoxPacote);
+            this.tabPage2.Controls.Add(this.tbxDestinoPacote);
+            this.tabPage2.Controls.Add(this.tbxOrigemPacote);
+            this.tabPage2.Controls.Add(this.tbxValorPacote);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.btnBuscarPacote);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.btnAlterarPacote);
+            this.tabPage2.Controls.Add(this.btnDeletarPacote);
             this.tabPage2.Controls.Add(this.btnBuscarImagemPacote);
             this.tabPage2.Controls.Add(this.tbxCodigoPacote);
             this.tabPage2.Controls.Add(this.label3);
@@ -120,36 +188,82 @@ namespace ProjetoAgenciaTI11T.View
             this.tabPage2.Text = "Pesquisar por Codigo";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // label6
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox2.Location = new System.Drawing.Point(533, 180);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(141, 90);
-            this.pictureBox2.TabIndex = 34;
-            this.pictureBox2.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(393, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 15);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Descrição";
             // 
-            // tbxSenhaPacote
+            // tbxDataVolta
             // 
-            this.tbxSenhaPacote.Location = new System.Drawing.Point(54, 151);
-            this.tbxSenhaPacote.Name = "tbxSenhaPacote";
-            this.tbxSenhaPacote.PasswordChar = '*';
-            this.tbxSenhaPacote.Size = new System.Drawing.Size(300, 23);
-            this.tbxSenhaPacote.TabIndex = 33;
+            this.tbxDataVolta.Location = new System.Drawing.Point(88, 208);
+            this.tbxDataVolta.Name = "tbxDataVolta";
+            this.tbxDataVolta.PasswordChar = '*';
+            this.tbxDataVolta.Size = new System.Drawing.Size(266, 23);
+            this.tbxDataVolta.TabIndex = 40;
             // 
-            // tbxEmailPacote
+            // label5
             // 
-            this.tbxEmailPacote.Location = new System.Drawing.Point(62, 122);
-            this.tbxEmailPacote.Name = "tbxEmailPacote";
-            this.tbxEmailPacote.Size = new System.Drawing.Size(292, 23);
-            this.tbxEmailPacote.TabIndex = 32;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(6, 211);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 15);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Data de Volta";
             // 
-            // tbxNomePacote
+            // tbxDataIda
             // 
-            this.tbxNomePacote.Location = new System.Drawing.Point(55, 93);
-            this.tbxNomePacote.Name = "tbxNomePacote";
-            this.tbxNomePacote.Size = new System.Drawing.Size(299, 23);
-            this.tbxNomePacote.TabIndex = 31;
+            this.tbxDataIda.Location = new System.Drawing.Point(78, 179);
+            this.tbxDataIda.Name = "tbxDataIda";
+            this.tbxDataIda.PasswordChar = '*';
+            this.tbxDataIda.Size = new System.Drawing.Size(276, 23);
+            this.tbxDataIda.TabIndex = 38;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(6, 182);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 15);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Data de Ida";
+            // 
+            // pictureBoxPacote
+            // 
+            this.pictureBoxPacote.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBoxPacote.Location = new System.Drawing.Point(535, 136);
+            this.pictureBoxPacote.Name = "pictureBoxPacote";
+            this.pictureBoxPacote.Size = new System.Drawing.Size(154, 114);
+            this.pictureBoxPacote.TabIndex = 34;
+            this.pictureBoxPacote.TabStop = false;
+            // 
+            // tbxDestinoPacote
+            // 
+            this.tbxDestinoPacote.Location = new System.Drawing.Point(54, 151);
+            this.tbxDestinoPacote.Name = "tbxDestinoPacote";
+            this.tbxDestinoPacote.PasswordChar = '*';
+            this.tbxDestinoPacote.Size = new System.Drawing.Size(300, 23);
+            this.tbxDestinoPacote.TabIndex = 33;
+            // 
+            // tbxOrigemPacote
+            // 
+            this.tbxOrigemPacote.Location = new System.Drawing.Point(62, 122);
+            this.tbxOrigemPacote.Name = "tbxOrigemPacote";
+            this.tbxOrigemPacote.Size = new System.Drawing.Size(292, 23);
+            this.tbxOrigemPacote.TabIndex = 32;
+            // 
+            // tbxValorPacote
+            // 
+            this.tbxValorPacote.Location = new System.Drawing.Point(55, 93);
+            this.tbxValorPacote.Name = "tbxValorPacote";
+            this.tbxValorPacote.Size = new System.Drawing.Size(299, 23);
+            this.tbxValorPacote.TabIndex = 31;
             // 
             // label7
             // 
@@ -157,9 +271,9 @@ namespace ProjetoAgenciaTI11T.View
             this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(6, 154);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 15);
+            this.label7.Size = new System.Drawing.Size(47, 15);
             this.label7.TabIndex = 30;
-            this.label7.Text = "Senha";
+            this.label7.Text = "Destino";
             // 
             // label8
             // 
@@ -189,28 +303,29 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscarPacote.TabIndex = 27;
             this.btnBuscarPacote.Text = "Buscar";
             this.btnBuscarPacote.UseVisualStyleBackColor = true;
+            this.btnBuscarPacote.Click += new System.EventHandler(this.btnBuscarPacote_Click);
             // 
-            // button2
+            // btnAlterarPacote
             // 
-            this.button2.Location = new System.Drawing.Point(295, 276);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Alterar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAlterarPacote.Location = new System.Drawing.Point(295, 276);
+            this.btnAlterarPacote.Name = "btnAlterarPacote";
+            this.btnAlterarPacote.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarPacote.TabIndex = 26;
+            this.btnAlterarPacote.Text = "Alterar";
+            this.btnAlterarPacote.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnDeletarPacote
             // 
-            this.button1.Location = new System.Drawing.Point(376, 276);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Deletar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDeletarPacote.Location = new System.Drawing.Point(376, 276);
+            this.btnDeletarPacote.Name = "btnDeletarPacote";
+            this.btnDeletarPacote.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletarPacote.TabIndex = 25;
+            this.btnDeletarPacote.Text = "Deletar";
+            this.btnDeletarPacote.UseVisualStyleBackColor = true;
             // 
             // btnBuscarImagemPacote
             // 
-            this.btnBuscarImagemPacote.Location = new System.Drawing.Point(550, 276);
+            this.btnBuscarImagemPacote.Location = new System.Drawing.Point(562, 256);
             this.btnBuscarImagemPacote.Name = "btnBuscarImagemPacote";
             this.btnBuscarImagemPacote.Size = new System.Drawing.Size(112, 23);
             this.btnBuscarImagemPacote.TabIndex = 24;
@@ -235,77 +350,16 @@ namespace ProjetoAgenciaTI11T.View
             this.label3.TabIndex = 3;
             this.label3.Text = "Digite o Codigo do Pacote...";
             // 
-            // textBox1
+            // openFileDialogPacote
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 180);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(295, 23);
-            this.textBox1.TabIndex = 36;
+            this.openFileDialogPacote.FileName = "openFileDialogPacote";
             // 
-            // label2
+            // tbxDescrição
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(6, 183);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 15);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Destino";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(78, 209);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(276, 23);
-            this.textBox2.TabIndex = 38;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(6, 212);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 15);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Data de Ida";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(88, 238);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(266, 23);
-            this.textBox3.TabIndex = 40;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(6, 241);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 15);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Data de Volta";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(459, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 15);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Descrição";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(533, 86);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(141, 83);
-            this.richTextBox1.TabIndex = 42;
-            this.richTextBox1.Text = "";
+            this.tbxDescrição.Location = new System.Drawing.Point(457, 93);
+            this.tbxDescrição.Name = "tbxDescrição";
+            this.tbxDescrição.Size = new System.Drawing.Size(285, 23);
+            this.tbxDescrição.TabIndex = 42;
             // 
             // TelaPesquisarPacote
             // 
@@ -317,9 +371,12 @@ namespace ProjetoAgenciaTI11T.View
             this.Name = "TelaPesquisarPacote";
             this.Text = "TelaPesquisarPacote";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPaco)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPacote)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,23 +391,29 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbxCodigoPacote;
         private System.Windows.Forms.Button btnBuscarPacote;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAlterarPacote;
+        private System.Windows.Forms.Button btnDeletarPacote;
         private System.Windows.Forms.Button btnBuscarImagemPacote;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tbxSenhaPacote;
-        private System.Windows.Forms.TextBox tbxEmailPacote;
-        private System.Windows.Forms.TextBox tbxNomePacote;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox tbxDestinoPacote;
+        private System.Windows.Forms.TextBox tbxOrigemPacote;
+        private System.Windows.Forms.TextBox tbxValorPacote;
+        private System.Windows.Forms.PictureBox pictureBoxPacote;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbxDataVolta;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbxDataIda;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridViewPaco;
+        private System.Windows.Forms.Button btnBuscarNomePacote;
+        private System.Windows.Forms.TextBox tbxOrigem;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Origem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Destino;
+        private System.Windows.Forms.OpenFileDialog openFileDialogPacote;
+        private System.Windows.Forms.TextBox tbxDescrição;
     }
 }
