@@ -69,7 +69,7 @@ namespace ProjetoAgenciaTI11T.Controller
 
                 if (arrayDados.Read())
                 {
-                    Pacote.CodiogoPacote = Convert.ToInt32(arrayDados["codigoFun"]);
+                    Pacote.CodiogoPacote = Convert.ToInt32(arrayDados["codigoPacote"]);
                     Pacote.ValorPacote = arrayDados["valorPacote"].ToString();
                     Pacote.OrigemPacote = arrayDados["origemPacote"].ToString();
                     Pacote.DestinoPacote = arrayDados["destinoPacote"].ToString();
@@ -121,5 +121,62 @@ namespace ProjetoAgenciaTI11T.Controller
                 }
             }
         }
+
+        public void alterarPacote()
+        {
+
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pAlterarPacote", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                cmd.Parameters.AddWithValue("@codigoPacote", Pacote.CodiogoPacote);
+                cmd.Parameters.AddWithValue("@valorPacote", Pacote.ValorPacote);
+                cmd.Parameters.AddWithValue("@origemPacote", Pacote.OrigemPacote);
+                cmd.Parameters.AddWithValue("@destinoPacote", Pacote.DestinoPacote);
+                cmd.Parameters.AddWithValue("@dataPacoteIda", Pacote.DataPacoteIda);
+                cmd.Parameters.AddWithValue("@dataPacoteVolta", Pacote.DataPacoteVolta);
+                cmd.Parameters.AddWithValue("@descricaoPacote", Pacote.DescricaoPacote);
+                cmd.Parameters.AddWithValue("@imagemPacote", Pacote.ImagemPacote);
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Pacote alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("O Pacote não pode ser Alterado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            finally
+            {
+                if (cn.State != ConnectionState.Closed)
+                {
+                    cn.Close();
+                }
+            }
+        }
+        public static BindingSource pesquisaOrigemPacote()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pPesquisarOrigemPacote", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@origemPacote", Pacote.OrigemPacote);
+            cn.Open();
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
+
+            DataTable table = new DataTable();
+
+            sqlData.Fill(table);
+
+            BindingSource dados = new BindingSource();
+            dados.DataSource = table;
+
+            return dados;
+        }
+        
     }
 }

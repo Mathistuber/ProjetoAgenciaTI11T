@@ -123,22 +123,25 @@ namespace ProjetoAgenciaTI11T.View
 
         private void btnBuscarNomeFun_Click(object sender, EventArgs e)
         {
-            if(tbxNomeFuncionario.Text == "")
+            if (tbxPesquisarNomeFun.Text == "")
             {
-                MessageBox.Show("Digite um nome para busca. ", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Digite um nome para buscar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
 
-            Funcionarios.NomeFun = tbxNomeFuncionario.Text;
+            Funcionarios.NomeFun = tbxPesquisarNomeFun.Text;
 
-            dataGridViewFun.DataSource = ManipulaFuncionario.pesquisarFuncionario();
+            dataGridViewFun.DataSource = ManipulaFuncionario.pesquisarNomeFuncionario();
 
-            dataGridViewFun.Columns[0].Visible = false;
-            dataGridViewFun.Columns[1].Visible = false;
-            dataGridViewFun.Columns[2].Visible = false;
-            dataGridViewFun.Columns[4].HeaderCell.Value = "Código";
-            dataGridViewFun.Columns[5].HeaderCell.Value = "Nome";
-            dataGridViewFun.Columns[6].HeaderCell.Value = "Email";
+          dataGridViewFun.Columns[0].Visible = false;
+          dataGridViewFun.Columns[1].Visible = false;
+          dataGridViewFun.Columns[2].Visible = false;
+          dataGridViewFun.Columns[3].HeaderCell.Value = "Código";
+          dataGridViewFun.Columns[4].HeaderCell.Value = "Nome";
+          dataGridViewFun.Columns[5].HeaderCell.Value = "E-mail";
+          dataGridViewFun.Columns[6].Visible = false;
+
+
 
         }
     }

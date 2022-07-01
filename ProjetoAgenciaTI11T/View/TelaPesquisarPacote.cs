@@ -24,7 +24,7 @@ namespace ProjetoAgenciaTI11T.View
         {
             if (tbxCodigoPacote.Text == "")
             {
-                MessageBox.Show("Digite um Código de Cliente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Digite um Código de ", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 tbxCodigoPacote.Text = string.Empty;
                 tbxCodigoPacote.Focus();
@@ -39,7 +39,7 @@ namespace ProjetoAgenciaTI11T.View
             }
             else
             {
-                Clientes.CodigoCli = Convert.ToInt32(tbxCodigoPacote.Text);
+                Pacote.CodiogoPacote = Convert.ToInt32(tbxCodigoPacote.Text);
                 ManipulaPacote manipulaPacote = new ManipulaPacote();
                 manipulaPacote.pesquisarCodigoPacote();
 
@@ -75,5 +75,32 @@ namespace ProjetoAgenciaTI11T.View
 
             }
         }
+
+        private void btnBuscarNomePacote_Click(object sender, EventArgs e)
+        {
+            if (tbxOrigem.Text == "")
+            {
+                MessageBox.Show("Digite um nome para buscar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Pacote.OrigemPacote = tbxOrigem.Text;
+
+            dataGridViewPaco.DataSource = ManipulaPacote.pesquisaOrigemPacote();
+            dataGridViewPaco.Columns[0].Visible = false;
+            dataGridViewPaco.Columns[1].Visible = false;
+            dataGridViewPaco.Columns[2].Visible = false;
+            dataGridViewPaco.Columns[3].Visible = false;
+            dataGridViewPaco.Columns[4].Visible = false;
+            dataGridViewPaco.Columns[5].Visible = false;
+            dataGridViewPaco.Columns[6].HeaderCell.Value = "Valor";
+            dataGridViewPaco.Columns[7].HeaderCell.Value = "Destino";
+            dataGridViewPaco.Columns[8].HeaderCell.Value = "Origem";
+            dataGridViewPaco.Columns[9].HeaderCell.Value = "Ida";
+            dataGridViewPaco.Columns[10].HeaderCell.Value = "Volta";
+            dataGridViewPaco.Columns[11].Visible = false;
+            dataGridViewPaco.Columns[12].Visible = false;
+        }
+
     }
 }

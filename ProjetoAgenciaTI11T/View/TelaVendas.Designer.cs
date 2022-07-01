@@ -30,24 +30,27 @@ namespace ProjetoAgenciaTI11T.View
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.eeee = new System.Windows.Forms.Label();
+            this.tbxCliente = new System.Windows.Forms.TextBox();
+            this.tbxCodCli = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tbxCodCli = new System.Windows.Forms.TextBox();
-            this.tbxCliente = new System.Windows.Forms.TextBox();
-            this.eeee = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbxFuncionario = new System.Windows.Forms.TextBox();
             this.tbxCodFun = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbxPacote = new System.Windows.Forms.TextBox();
             this.tbxCodPacote = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnSalvarPacote = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -61,18 +64,60 @@ namespace ProjetoAgenciaTI11T.View
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(12, 69);
+            this.groupBox1.Location = new System.Drawing.Point(12, 77);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(352, 100);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações de Cliente";
             // 
+            // eeee
+            // 
+            this.eeee.AutoSize = true;
+            this.eeee.Location = new System.Drawing.Point(53, 65);
+            this.eeee.Name = "eeee";
+            this.eeee.Size = new System.Drawing.Size(51, 17);
+            this.eeee.TabIndex = 4;
+            this.eeee.Text = "Cliente";
+            // 
+            // tbxCliente
+            // 
+            this.tbxCliente.Location = new System.Drawing.Point(130, 62);
+            this.tbxCliente.Name = "tbxCliente";
+            this.tbxCliente.Size = new System.Drawing.Size(195, 25);
+            this.tbxCliente.TabIndex = 3;
+            // 
+            // tbxCodCli
+            // 
+            this.tbxCodCli.Location = new System.Drawing.Point(130, 33);
+            this.tbxCodCli.Name = "tbxCodCli";
+            this.tbxCodCli.Size = new System.Drawing.Size(82, 25);
+            this.tbxCodCli.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(250, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Codigo de Cliente";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Stencil", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(65, 19);
+            this.label1.Location = new System.Drawing.Point(172, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(251, 34);
             this.label1.TabIndex = 3;
@@ -86,69 +131,12 @@ namespace ProjetoAgenciaTI11T.View
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(12, 175);
+            this.groupBox2.Location = new System.Drawing.Point(12, 201);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(352, 100);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações de Funcionario";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.tbxPacote);
-            this.groupBox3.Controls.Add(this.tbxCodPacote);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(12, 281);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(352, 100);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Informações do Pacote";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Codigo de Cliente";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(250, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // tbxCodCli
-            // 
-            this.tbxCodCli.Location = new System.Drawing.Point(130, 33);
-            this.tbxCodCli.Name = "tbxCodCli";
-            this.tbxCodCli.Size = new System.Drawing.Size(82, 25);
-            this.tbxCodCli.TabIndex = 2;
-            // 
-            // tbxCliente
-            // 
-            this.tbxCliente.Location = new System.Drawing.Point(130, 62);
-            this.tbxCliente.Name = "tbxCliente";
-            this.tbxCliente.Size = new System.Drawing.Size(195, 25);
-            this.tbxCliente.TabIndex = 3;
-            // 
-            // eeee
-            // 
-            this.eeee.AutoSize = true;
-            this.eeee.Location = new System.Drawing.Point(53, 65);
-            this.eeee.Name = "eeee";
-            this.eeee.Size = new System.Drawing.Size(51, 17);
-            this.eeee.TabIndex = 4;
-            this.eeee.Text = "Cliente";
             // 
             // label3
             // 
@@ -181,6 +169,7 @@ namespace ProjetoAgenciaTI11T.View
             this.button2.TabIndex = 6;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
@@ -190,6 +179,21 @@ namespace ProjetoAgenciaTI11T.View
             this.label4.Size = new System.Drawing.Size(148, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "Codigo de Funcionario";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.tbxPacote);
+            this.groupBox3.Controls.Add(this.tbxCodPacote);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox3.Location = new System.Drawing.Point(12, 325);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(352, 100);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Informações do Pacote";
             // 
             // label5
             // 
@@ -222,6 +226,7 @@ namespace ProjetoAgenciaTI11T.View
             this.button3.TabIndex = 6;
             this.button3.Text = "Buscar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label6
             // 
@@ -232,11 +237,45 @@ namespace ProjetoAgenciaTI11T.View
             this.label6.TabIndex = 5;
             this.label6.Text = "Codigo de Pacote";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sim",
+            "Não"});
+            this.comboBox1.Location = new System.Drawing.Point(431, 225);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(98, 23);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(393, 201);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(171, 21);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Pagamento Efetuado";
+            // 
+            // btnSalvarPacote
+            // 
+            this.btnSalvarPacote.Location = new System.Drawing.Point(401, 266);
+            this.btnSalvarPacote.Name = "btnSalvarPacote";
+            this.btnSalvarPacote.Size = new System.Drawing.Size(162, 44);
+            this.btnSalvarPacote.TabIndex = 6;
+            this.btnSalvarPacote.Text = "Salvar";
+            this.btnSalvarPacote.UseVisualStyleBackColor = true;
+            this.btnSalvarPacote.Click += new System.EventHandler(this.btnSalvarPacote_Click);
+            // 
             // TelaVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 450);
+            this.ClientSize = new System.Drawing.Size(576, 457);
+            this.Controls.Add(this.btnSalvarPacote);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label1);
@@ -275,5 +314,8 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.TextBox tbxCodPacote;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnSalvarPacote;
     }
 }

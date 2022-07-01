@@ -44,7 +44,6 @@ namespace ProjetoAgenciaTI11T.View
             this.pesquisarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pesquisarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -157,8 +156,7 @@ namespace ProjetoAgenciaTI11T.View
             // vendaToolStripMenuItem
             // 
             this.vendaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarToolStripMenuItem,
-            this.pesquisarToolStripMenuItem3});
+            this.registrarToolStripMenuItem});
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             this.vendaToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
             this.vendaToolStripMenuItem.Text = "&Venda";
@@ -169,12 +167,6 @@ namespace ProjetoAgenciaTI11T.View
             this.registrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.registrarToolStripMenuItem.Text = "Registrar";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
-            // 
-            // pesquisarToolStripMenuItem3
-            // 
-            this.pesquisarToolStripMenuItem3.Name = "pesquisarToolStripMenuItem3";
-            this.pesquisarToolStripMenuItem3.Size = new System.Drawing.Size(180, 24);
-            this.pesquisarToolStripMenuItem3.Text = "Pesquisar";
             // 
             // pictureBox1
             // 
@@ -224,7 +216,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;

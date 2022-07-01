@@ -144,9 +144,9 @@ namespace ProjetoAgenciaTI11T.View
 
         private void btnBuscarNomeCliente_Click(object sender, EventArgs e)
         {
-            if(tbxNomeCliente.Text == "")
+            if (tbxNomeCliente.Text == "")
             {
-                MessageBox.Show("Digite um nome para busca. ", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Digite um nome para buscar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
 
@@ -160,10 +160,9 @@ namespace ProjetoAgenciaTI11T.View
             dataGridView1.Columns[3].Visible = false;
             dataGridView1.Columns[4].HeaderCell.Value = "Código";
             dataGridView1.Columns[5].HeaderCell.Value = "Nome";
-            dataGridView1.Columns[6].HeaderCell.Value = "Email";
+            dataGridView1.Columns[6].HeaderCell.Value = "E-mail";
             dataGridView1.Columns[7].Visible = false;
-            dataGridView1.Columns[8].HeaderCell.Value = "Foto";
-       
+            dataGridView1.Columns[8].HeaderCell.Value = "Imagem";
         }
     }
 }

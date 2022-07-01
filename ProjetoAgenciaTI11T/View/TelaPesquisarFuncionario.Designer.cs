@@ -33,9 +33,12 @@ namespace ProjetoAgenciaTI11T.View
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnBuscarNomeFun = new System.Windows.Forms.Button();
-            this.tbxNomeFuncionario = new System.Windows.Forms.TextBox();
+            this.tbxPesquisarNomeFun = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewFun = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnAlterarFuncionario = new System.Windows.Forms.Button();
             this.btnDeletarFuncionario = new System.Windows.Forms.Button();
@@ -48,9 +51,6 @@ namespace ProjetoAgenciaTI11T.View
             this.label9 = new System.Windows.Forms.Label();
             this.tbxCodigoFun = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFun)).BeginInit();
@@ -80,7 +80,7 @@ namespace ProjetoAgenciaTI11T.View
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.btnBuscarNomeFun);
-            this.tabPage2.Controls.Add(this.tbxNomeFuncionario);
+            this.tabPage2.Controls.Add(this.tbxPesquisarNomeFun);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.dataGridViewFun);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
@@ -101,13 +101,13 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscarNomeFun.UseVisualStyleBackColor = true;
             this.btnBuscarNomeFun.Click += new System.EventHandler(this.btnBuscarNomeFun_Click);
             // 
-            // tbxNomeFuncionario
+            // tbxPesquisarNomeFun
             // 
-            this.tbxNomeFuncionario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbxNomeFuncionario.Location = new System.Drawing.Point(237, 38);
-            this.tbxNomeFuncionario.Name = "tbxNomeFuncionario";
-            this.tbxNomeFuncionario.Size = new System.Drawing.Size(371, 29);
-            this.tbxNomeFuncionario.TabIndex = 7;
+            this.tbxPesquisarNomeFun.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxPesquisarNomeFun.Location = new System.Drawing.Point(237, 38);
+            this.tbxPesquisarNomeFun.Name = "tbxPesquisarNomeFun";
+            this.tbxPesquisarNomeFun.Size = new System.Drawing.Size(371, 29);
+            this.tbxPesquisarNomeFun.TabIndex = 7;
             // 
             // label2
             // 
@@ -132,6 +132,23 @@ namespace ProjetoAgenciaTI11T.View
             this.dataGridViewFun.RowTemplate.Height = 25;
             this.dataGridViewFun.Size = new System.Drawing.Size(768, 223);
             this.dataGridViewFun.TabIndex = 5;
+            // 
+            // Codigo
+            // 
+            this.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 71;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
             // 
             // tabPage1
             // 
@@ -254,23 +271,6 @@ namespace ProjetoAgenciaTI11T.View
             this.label3.TabIndex = 2;
             this.label3.Text = "Digite o Codigo do Funcionario...";
             // 
-            // Codigo
-            // 
-            this.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 71;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
             // TelaPesquisarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -310,7 +310,7 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Button btnBuscarFuncionario;
         private System.Windows.Forms.DataGridView dataGridViewFun;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbxNomeFuncionario;
+        private System.Windows.Forms.TextBox tbxPesquisarNomeFun;
         private System.Windows.Forms.Button btnBuscarNomeFun;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;

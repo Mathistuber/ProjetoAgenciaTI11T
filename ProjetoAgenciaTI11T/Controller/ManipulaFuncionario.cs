@@ -148,7 +148,7 @@ namespace ProjetoAgenciaTI11T.Controller
             }
         }
 
-        public static BindingSource pesquisarFuncionario()
+        public static BindingSource pesquisarNomeFuncionario()
         {
             SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
             SqlCommand cmd = new SqlCommand("pPesquisarNomeFuncionario", cn);

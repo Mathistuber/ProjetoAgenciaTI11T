@@ -33,13 +33,11 @@ namespace ProjetoAgenciaTI11T.View
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridViewPaco = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Origem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarNomePacote = new System.Windows.Forms.Button();
             this.tbxOrigem = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbxDescrição = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbxDataVolta = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,7 +57,11 @@ namespace ProjetoAgenciaTI11T.View
             this.tbxCodigoPacote = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.openFileDialogPacote = new System.Windows.Forms.OpenFileDialog();
-            this.tbxDescrição = new System.Windows.Forms.TextBox();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Destino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Origem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Volta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPaco)).BeginInit();
@@ -98,7 +100,7 @@ namespace ProjetoAgenciaTI11T.View
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(768, 305);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Pesquisar por Nome";
+            this.tabPage1.Text = "Pesquisar por Origem";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dataGridViewPaco
@@ -106,31 +108,16 @@ namespace ProjetoAgenciaTI11T.View
             this.dataGridViewPaco.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPaco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPaco.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
+            this.Valor,
+            this.Destino,
             this.Origem,
-            this.Destino});
+            this.Ida,
+            this.Volta});
             this.dataGridViewPaco.Location = new System.Drawing.Point(6, 79);
             this.dataGridViewPaco.Name = "dataGridViewPaco";
             this.dataGridViewPaco.RowTemplate.Height = 25;
             this.dataGridViewPaco.Size = new System.Drawing.Size(756, 223);
             this.dataGridViewPaco.TabIndex = 8;
-            // 
-            // Codigo
-            // 
-            this.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 71;
-            // 
-            // Origem
-            // 
-            this.Origem.HeaderText = "Origem";
-            this.Origem.Name = "Origem";
-            // 
-            // Destino
-            // 
-            this.Destino.HeaderText = "Destino";
-            this.Destino.Name = "Destino";
             // 
             // btnBuscarNomePacote
             // 
@@ -140,6 +127,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscarNomePacote.TabIndex = 7;
             this.btnBuscarNomePacote.Text = "Buscar";
             this.btnBuscarNomePacote.UseVisualStyleBackColor = true;
+            this.btnBuscarNomePacote.Click += new System.EventHandler(this.btnBuscarNomePacote_Click);
             // 
             // tbxOrigem
             // 
@@ -155,9 +143,9 @@ namespace ProjetoAgenciaTI11T.View
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.Location = new System.Drawing.Point(6, 47);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(188, 21);
+            this.label10.Size = new System.Drawing.Size(197, 21);
             this.label10.TabIndex = 5;
-            this.label10.Text = "Digite o nome do Pacote...";
+            this.label10.Text = "Digite a origem do Pacote...";
             // 
             // tabPage2
             // 
@@ -187,6 +175,13 @@ namespace ProjetoAgenciaTI11T.View
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Pesquisar por Codigo";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tbxDescrição
+            // 
+            this.tbxDescrição.Location = new System.Drawing.Point(457, 93);
+            this.tbxDescrição.Name = "tbxDescrição";
+            this.tbxDescrição.Size = new System.Drawing.Size(285, 23);
+            this.tbxDescrição.TabIndex = 42;
             // 
             // label6
             // 
@@ -354,12 +349,30 @@ namespace ProjetoAgenciaTI11T.View
             // 
             this.openFileDialogPacote.FileName = "openFileDialogPacote";
             // 
-            // tbxDescrição
+            // Valor
             // 
-            this.tbxDescrição.Location = new System.Drawing.Point(457, 93);
-            this.tbxDescrição.Name = "tbxDescrição";
-            this.tbxDescrição.Size = new System.Drawing.Size(285, 23);
-            this.tbxDescrição.TabIndex = 42;
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            // 
+            // Destino
+            // 
+            this.Destino.HeaderText = "Destino";
+            this.Destino.Name = "Destino";
+            // 
+            // Origem
+            // 
+            this.Origem.HeaderText = "Origem";
+            this.Origem.Name = "Origem";
+            // 
+            // Ida
+            // 
+            this.Ida.HeaderText = "Ida";
+            this.Ida.Name = "Ida";
+            // 
+            // Volta
+            // 
+            this.Volta.HeaderText = "Volta";
+            this.Volta.Name = "Volta";
             // 
             // TelaPesquisarPacote
             // 
@@ -410,10 +423,12 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Button btnBuscarNomePacote;
         private System.Windows.Forms.TextBox tbxOrigem;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Origem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Destino;
         private System.Windows.Forms.OpenFileDialog openFileDialogPacote;
         private System.Windows.Forms.TextBox tbxDescrição;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Destino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Origem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Volta;
     }
 }
